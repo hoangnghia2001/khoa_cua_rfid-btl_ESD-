@@ -1,0 +1,9 @@
+../Core/Src/flash.c:11:6:Flash_Erase	1
+../Core/Src/flash.c:22:6:Flash_Write_2Byte	1
+../Core/Src/flash.c:27:6:Flash_Write_4Byte	1
+../Core/Src/flash.c:32:6:Flash_Write_Array	2
+../Core/Src/flash.c:40:10:Flash_Read_Byte	1
+../Core/Src/flash.c:43:10:Flash_Read_2Byte	1
+../Core/Src/flash.c:46:10:Flash_Read_4Byte	1
+../Core/Src/flash.c:49:10:Flash_Read_8Byte	1
+../Core/Src/flash.c:52:7:Flash_Read_Array	2

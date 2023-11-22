@@ -203,7 +203,7 @@ int main(void)
 		}
 		if (TM_MFRC522_Check(CardID) == MI_OK)
 		{
-			sprintf(str, "ID: 0x%02X%02X%02X%02X%02X", CardID[0], CardID[1], CardID[2], CardID[3], CardID[4]);
+//			sprintf(str, "ID: 0x%02X%02X%02X%02X%02X", CardID[0], CardID[1], CardID[2], CardID[3], CardID[4]);
 			HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 1);
 			HAL_GPIO_WritePin(LOA_GPIO_Port, LOA_Pin, 1);
 			HAL_Delay(delayloa);
@@ -379,7 +379,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, CS_Pin|GPIO_PIN_15, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, CS_Pin|QR_Pin|GPIO_PIN_15, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LOA_Pin|KHOA_Pin|LED_Pin|D7_Pin
@@ -393,8 +393,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : CS_Pin PA15 */
-  GPIO_InitStruct.Pin = CS_Pin|GPIO_PIN_15;
+  /*Configure GPIO pins : CS_Pin QR_Pin PA15 */
+  GPIO_InitStruct.Pin = CS_Pin|QR_Pin|GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

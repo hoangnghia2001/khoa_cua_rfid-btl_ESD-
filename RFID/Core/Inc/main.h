@@ -69,6 +69,8 @@ void Error_Handler(void);
 #define SELECCT_GPIO_Port GPIOB
 #define MENU_Pin GPIO_PIN_8
 #define MENU_GPIO_Port GPIOA
+#define QR_Pin GPIO_PIN_10
+#define QR_GPIO_Port GPIOA
 #define D7_Pin GPIO_PIN_3
 #define D7_GPIO_Port GPIOB
 #define D6_Pin GPIO_PIN_4
